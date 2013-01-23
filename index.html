@@ -4,6 +4,11 @@
 		<meta charset="utf-8" />
 		<title>Hur man kan använda Github i Skolan</title>
 		<link rel="stylesheet" type="text/css" href="http://static.pie-studios.com/bootstrap/css/bootstrap.min.css" />
+		<style>
+			hr { margin: 50px; }
+		</style>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://static.pie-studios.com/assets/js/plugins.jquery.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -13,9 +18,15 @@
 			
 			<h2>Hur man använder det som Elev</h2>
 			<h4>Steg 1 - Skaffa ett Github Konto</h4>
-			<p>Gå in på <a href="https://github.com">https://github.com</a>, och använd formuläret på framsidan.</p>
-			<p>OBS! Se till att använda en fungerande email-adress.</p>
-			<img src="http://i.pie-studios.com/ac96d65e38.png" alt="Derp" class="img-polaroid" />
+			<div class="row-fluid">
+				<div class="span6">
+					<p>Gå in på <a href="https://github.com">https://github.com</a>, och använd formuläret på framsidan.</p>
+					<p>OBS! Se till att använda en fungerande email-adress.</p>
+				</div>
+				<div class="span6">
+					<img src="http://i.pie-studios.com/ac96d65e38.png" alt="Derp" class="img-polaroid" />
+				</div>
+			</div>
 			<hr/>
 			<h4>Steg 2 - Kopiera grundarkivet<sup><a href="#1">1</a></sup> från Gruppen PRRPRR01TE2 till din egen användare</h4>
 			<p>Gå in på <a href="https://github.com/PRRPRR01TE2/uppgifter">https://github.com/PRRPRR01TE2/uppgifter</a>.<br/> Tryck på "Fork" <sup><a href="#2">2</a></sup> uppe i det högra hörnet.</p>
@@ -23,38 +34,80 @@
 			<img src="http://i.pie-studios.com/bc880e4b18.png" alt="Derp" class="img-polaroid" />
 			<hr/>
 			<h4>Steg 3 - Ladda ner &amp; installera Github-klienten</h4>
-			<p>Gå in på <a href="http://windows.github.com">http://windows.github.com</a> och ladda ner applikationen.</p>
-			<img src="http://i.pie-studios.com/6c73cd3fa8.png" alt="Derp" class="img-polaroid" />
-			<hr/>
-			<p>Starta GitHubSetup.exe, låt den ladda ner och installera applikationen.</p>
-			<p>När installationen är klar kommer programmet upp och ber dig logga in. Logga då in med den informationen du Skapade i Steg 1.</p>
-			<img src="http://i.pie-studios.com/8854cafb64.png" alt="Derp" class="img-polaroid" />
-			<hr/>
-			<p>Under "configure git", fyll i ditt namn och din email-adress som du använde när du skapade kontot på Github.</p>
-			<img src="http://i.pie-studios.com/190053432c.png" alt="Derp" class="img-polaroid" />
-			<hr/>
-			<p>Skippa steget "repositories".</p>
+			<div class="row-fluid">
+				<div class="span4">
+					<p>Gå in på <a href="http://windows.github.com">http://windows.github.com</a> och ladda ner applikationen.</p>
+				</div>
+				<div class="span4">
+					<p>Starta GitHubSetup.exe, låt den ladda ner och installera applikationen.</p>
+					<p>När installationen är klar kommer programmet upp och ber dig logga in. Logga då in med den informationen du Skapade i Steg 1.</p>
+				</div>
+				<div class="span4">
+					<p>Under "configure git", fyll i ditt namn och din email-adress som du använde när du skapade kontot på Github.</p>
+					<p>Skippa steget "repositories".</p>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span4">
+					<img src="http://i.pie-studios.com/6c73cd3fa8.png" alt="Derp" class="img-polaroid" />
+				</div>
+				<div class="span4">
+					<img src="http://i.pie-studios.com/8854cafb64.png" alt="Derp" class="img-polaroid" />
+				</div>
+				<div class="span4">
+					<img src="http://i.pie-studios.com/190053432c.png" alt="Derp" class="img-polaroid" />
+				</div>
+			</div>
 			<hr/>
 			<h4>Steg 4 - Ladda ner det kopierade arkivet och konfigurera din IDE<sup><a href="#3">3</a></sup> till samma plats</h4>
-			<p>I Github-klienten, klicka på ditt användarnamn under "github". Du borde då se ditt arkiv "uppgifter" komma upp med namnet "*användarnamn*/uppgifter".</p>
-			<img src="http://i.pie-studios.com/a82cb545fb.png" alt="Derp" class="img-polaroid" />
+			<div class="row-fluid">
+				<div class="span4">
+					<p>I Github-klienten, klicka på ditt användarnamn under "github". Du borde då se ditt arkiv "uppgifter" komma upp med namnet <code>*användarnamn*/uppgifter</code>.</p>
+				</div>
+				<div class="span4">
+					<p>Högerklicka på arkivet och tryck på "clone to..."</p>
+					<p>Välj en basmapp där du vill lägga arkivet.</p>
+					<p>När den har laddat ner klart så dubbelklickar du på arkivet. Du får då fram all uppdaterings-historik för arkivet. Det borde bilden nedan.</p>
+				</div>
+				<div class="span4">
+					<h4>Lite info</h4>
+					<p>När du har "klonat" ner arkivet kommer du hitta det under <code>*basmapp*\uppgifter</code><br/>Alltså, om du skulle välja mappen <code>C:\Users\ArmedGuy\Documents\GitHub</code>, så skulle du hitta arkivet under <code>C:\Users\ArmedGuy\Documents\GitHub\uppgifter</code>.</p>
+					<p>Detta kommer att bli det stället där du kommer att lägga all din kod som ska laddas upp.</p>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span6">
+					<img src="http://i.pie-studios.com/a82cb545fb.png" alt="Derp" class="img-polaroid" />
+				</div>
+				<div class="span6">
+					<img src="http://i.pie-studios.com/01053e81a7.png" alt="Derp" class="img-polaroid" />
+				</div>
+			</div>
 			<hr/>
 			<div class="row-fluid">
 				<div class="span6">
-					<p>Högerklicka på arkivet och tryck på "clone to..."</p>
-					<p>Välj en basmapp där du vill lägga arkivet.</p>
+					<p>Nu ska du ändra din "workspace" i Eclipse/NetBeans. Denna guide visar endast för Eclipse.</p>
+					<p>Starta Eclipse som vanligt(ifall att "Select workspace" rutan kommer upp, ta det som du vanligtvis tar.</p>
+					<p>I Eclipse, öppna <code>File -> Switch Workspace -> Other</code>. Spara det gamla värdet, sedan trycker du "Browse" och söker upp <code>*basmapp*\uppgifter</code> som du valde tidigare.</p>
 				</div>
 				<div class="span6">
-					<fieldset>
-						<legend>Lite Info</legend>
-						<p>När du har "klonat" ner arkivet kommer du hitta det under *basmapp*\uppgifter<br/>Alltså, om du skulle välja mappen C:\Users\ArmedGuy\Documents\GitHub, så skulle du hitta arkivet under C:\Users\ArmedGuy\Documents\GitHub\uppgifter.</p>
-						<p>Detta kommer att bli det stället där du kommer att lägga all din kod som ska laddas upp.</p>
-					</fieldset>
+					<p>Eclipse kommer att starta om, och du kommer att ha en tom vy.</p>
+					<p>För att importera alla projekt från den gamla "arbetsytan", klicka på <code>File -> Import</code> och välj <code>General -> Existing Projects into Workspace</code></p>
 				</div>
 			</div>
-			<p>När den har laddat ner klart så dubbelklickar du på arkivet. Du får då fram all uppdaterings-historik för arkivet. Det borde bilden nedan.</p>
-			<img src="http://i.pie-studios.com/01053e81a7.png" alt="Derp" class="img-polaroid" />
+			<div class="row-fluid">
+				<div class="span6">
+					<img src="http://i.pie-studios.com/af2e8e88a1.png" alt="Derp" class="img-polaroid" />
+				</div>
+				<div class="span6">
+					<img src="http://i.pie-studios.com/42c27a36a6.png" alt="Derp" class="img-polaroid" />
+				</div>
+			</div>
 			<hr/>
-			
 		</div>
+		<script>
+		$(function() {
+			$("img").colorbox();
+		});
+		</script>
 	</body>
